@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('profils', function (Blueprint $table) {
             $table->id();
+            $table->string('nama_lengkap'); // Tambahkan ini
+            $table->text('bio'); // Tambahkan ini
+            $table->string('email'); // Tambahkan ini
             $table->timestamps();
-        });
+});
     }
 
     /**

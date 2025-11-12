@@ -25,10 +25,10 @@ class ProfilSeeder extends Seeder
         ]);
 
         // Anda bisa tambahkan data lain
-        DB::table('profils')->insert([
-            'nama_lengkap' => 'Budi Santoso',
-            'bio' => 'Seorang mahasiswa yang sedang belajar Laravel.',
-            'email' => 'budi@contoh.com',
-]);
+//         DB::table('profils')->insert([
+//             'nama_lengkap' => 'Budi Santoso',
+//             'bio' => 'Seorang mahasiswa yang sedang belajar Laravel.',
+//             'email' => 'budi@contoh.com',
+// ]);
     }
 }
