@@ -17,18 +17,14 @@ class ProfilSeeder extends Seeder
     {
         // 3. Masukkan data contoh
         DB::table('profils')->insert([
-            'nama_lengkap' => 'Budi Santoso',
+            'nama_lengkap' => 'Moses Simangunsong',
             'bio' => 'Seorang mahasiswa yang sedang belajar Laravel.',
-            'email' => 'budi@contoh.com',
+            'email' => 'simangunsongmoses21@gmail.com',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
-        // Anda bisa tambahkan data lain
-//         DB::table('profils')->insert([
-//             'nama_lengkap' => 'Budi Santoso',
-//             'bio' => 'Seorang mahasiswa yang sedang belajar Laravel.',
-//             'email' => 'budi@contoh.com',
+        
 // ]);
     }
 }
