@@ -2,29 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Profil;
-
 use Illuminate\Http\Request;
-// ... (mungkin ada 'use App\Models\Profil;' jika Anda ikuti panduan awal)
+// use App\Models\Profil; // Kita nonaktifkan atau hapus baris ini jika tidak perlu
 
 class ProfilController extends Controller
 {
     public function index()
     {
-        // 2. Ambil data pertama dari tabel profils
-        //    (Ini akan mengambil data "Budi Santoso" dari seeder)
-        $profil = Profil::first(); 
         
-        // Jika tidak ada data, buat data darurat
-        if (!$profil) {
-             $profil = new Profil([
-                'nama_lengkap' => 'Data Tidak Ditemukan',
-                'bio' => 'Silakan jalankan seeder',
-                'email' => 'email@contoh.com'
-            ]);
-        }
-
-        // 3. Kirim data dari database ke view
-        return view('profil.index', ['profil' => $profil]);
+        $data_profil_statis = (object)[
+            'nama_lengkap' => 'Moses Romulus Simangunsong (Statis)',
+            'bio' => 'Ini tugas PABWE.',
+            'email' => '11s23011@example.com',
+        ];
+        
+        // 2. KIRIMKAN data ini ke View dengan nama variabel 'profil' (SESUAI DENGAN VIEW ANDA)
+        return view('profil.index', ['profil' => $data_profil_statis]);
     }
 }
